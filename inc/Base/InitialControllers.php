@@ -15,7 +15,7 @@ class InitialControllers{
 	}
 	private function load_hooks() {
 		register_activation_hook( self::get_file_locations('plugin'), [ Install::class, 'activate' ] );
-		register_deactivation_hook( $this->plugin, [ Install::class, 'deactivate' ] );
+		register_deactivation_hook( self::get_file_locations('plugin'), [ Install::class, 'deactivate' ] );
 		add_action('plugins_loaded',array($this,'rul_teams_loaded_text_domain'));
 		if (is_admin()){
 			add_action('init',[$this,'admin_settings_page'],99);
