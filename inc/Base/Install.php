@@ -25,4 +25,11 @@ class Install{
 		require_once (ABSPATH."wp-admin/includes/upgrade.php");
 		dbDelta($sql);
 	}
+
+	public static function deactivate(  ) {
+			global $wpdb;
+			$table_name=$wpdb->prefix.'rul_team_members';
+			$query="TRUNCATE TABLE {$table_name}";
+			$wpdb->query($query);
+	}
 }
