@@ -1,0 +1,17 @@
+{
+    "name": "walton/rul-teams",
+    "license": "gpl version",
+    "autoload": {
+        "psr-4": {
+            "RulTeams\\Inc\\": "./inc"
+        },
+        "files":["inc/functions.php"]
+    },
+    "authors": [
+        {
+            "name": "Monjur Hasan Milton",
+            "email": "monjurhasan105142@gmail.com"
+        }
+    ],
+    "require": {}
+}
